@@ -1,0 +1,1 @@
+docker build --platform=linux/amd64 -t tonwhales/lite-client-connector:v1 .
