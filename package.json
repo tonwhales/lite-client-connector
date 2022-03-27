@@ -9,10 +9,12 @@
     "build": "tsc"
   },
   "dependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.8",
     "@types/tmp": "^0.2.3",
     "axios": "^0.26.1",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "tmp": "^0.2.1",
     "ton": "^9.1.0",

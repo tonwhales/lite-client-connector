@@ -4,6 +4,7 @@ import childProcess from 'child_process';
 import fs from 'fs';
 import tmp from 'tmp';
 import axios from 'axios';
+import cors from 'cors';
 const exec = util.promisify(childProcess.exec);
 
 async function handleCommand(args: { config: string, command: string }) {
@@ -39,6 +40,7 @@ async function handleCommand(args: { config: string, command: string }) {
     let cache = new Map<string, string>();
     const app = express();
     const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+    app.use(cors());
     app.get('/', (req, res) => {
         res.send('Welcome to Validator!');
     });
